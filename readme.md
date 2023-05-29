@@ -1,2 +1,3 @@
-2° - 22 de Juniop
-1° - 3 de Agosto
+## Fechas
+* 2° - 22 de Junio
+* 1° - 3 de Agosto
