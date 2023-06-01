@@ -2,6 +2,10 @@ function MainConfigDB() {
     return "http://localhost:5555";
 }
 
+async function verifyLevel() {
+    
+}
+
 function getNameLevel(lvl) {
     switch(lvl) 
     {

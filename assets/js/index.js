@@ -1,13 +1,13 @@
 /* INIT */
 const DB = MainConfigDB();
+let userData  = JSON.parse(localStorage.getItem("alumno"));
 
 /* SCRIPT INDEX */
 if(document.location.pathname == "/index.html") {
     let index_start = document.getElementById("index_start");
     index_start.addEventListener("click", async() => {
-        let verifyUser = JSON.parse(localStorage.getItem("alumno"));
-        if(verifyUser) {
-            document.location = `${getUrlLevel(verifyUser.u_lvl)}`
+        if(userData) {
+            document.location = `${getUrlLevel(userData.u_lvl)}`
         }
 
 
@@ -96,7 +96,6 @@ if(document.location.pathname == "/index.html") {
 
 if(document.location.pathname == "/actividad/espera.html") {
     let curso = "";
-    let userData  = JSON.parse(localStorage.getItem("alumno"));
     if(!userData) document.location = "/index.html";
     
     let btnAvatar = document.getElementById("perfil-avatar");
@@ -153,9 +152,19 @@ if(document.location.pathname == "/actividad/espera.html") {
         loadTabUsers();
     }
 
+    setInterval(() => {
+        if(timeAvatar != 0) timeAvatar--;
+    }, 1000)
+
     loadPage();
 }
 
+let timeAvatar = 0;
 async function updateAvatar(id) {
+    if(timeAvatar != 0) return sendAlert("error", 5000, `Podras hacer esto dentro de ${timeAvatar} segundos.`)
     document.getElementById("user-avatar").src = `../assets/images/avatars/${id}.jpg`;
+    timeAvatar = 5;
+
+    await axios(`${DB}/panel-admin/alumnos/update/${userData.u_id}/avatar/${id}`)
+    sendAlert("success", 5000, "Se cambio correctamente tu avatar.\n* La actualización del avatar en el TAB de alumnos puede tardar.");
 };
