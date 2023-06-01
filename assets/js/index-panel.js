@@ -192,23 +192,3 @@ async function etapa_ConfigRegistro(registro) {
     if(data.status) return sendAlert("success", 5000, data.message), mainReloadPanel();
     else return sendAlert("error", 3000, data.message);
 }
-
-/* HELPERS */
-async function sendAlert(type, timer, message) {
-    const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: timer,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-            toast.addEventListener('mouseenter', Swal.stopTimer)
-            toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-    })
-
-    Toast.fire({
-        icon: type,
-        title: message
-    })
-}

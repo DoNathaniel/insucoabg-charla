@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/espera.css">
+    <script src="../assets/js/scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="icon" href="../assets/images/insuco.ico">
+    <script src="../assets/js/scripts/sweetalert2.all.min.js"></script>
+    <title>InsucoABG - Programación</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-top">
+            <div class="top-textload" id="top-textload">[Clase x] Esperando jugadores... (x/50) <div class="custom-loader"></div></div>
+        </div>
+        <div class="container-body">
+            <div class="body-tab perfil">
+                <div class="top-perfil">
+                    <div class="perfil-avatar" id="perfil-avatar">
+                        <img src="../assets/images/dev.png" id="user-avatar" class="t-p-a">
+                    </div>
+                    <div class="perfil-info">
+                        <div class="perfil-name" id="perfil-name">Cargando...</div>
+                        <div class="perfil-email" id="perfil-email">Cargando...</div>
+                    </div>
+                    <div class="perfil-bottom">
+                    </div>
+                </div>
+            </div>
+            <div id="update-avatar-tab" class="body-tab update-avatar activo">
+                <div class="top-update-avatar">
+                    <div class="avatar" onclick="updateAvatar(1)">
+                        <img src="../assets/images/avatars/1.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(2)">
+                        <img src="../assets/images/avatars/2.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(3)">
+                        <img src="../assets/images/avatars/3.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(4)">
+                        <img src="../assets/images/avatars/4.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(5)">
+                        <img src="../assets/images/avatars/5.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(6)">
+                        <img src="../assets/images/avatars/6.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(7)">
+                        <img src="../assets/images/avatars/7.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(8)">
+                        <img src="../assets/images/avatars/8.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(9)">
+                        <img src="../assets/images/avatars/9.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(10)">
+                        <img src="../assets/images/avatars/10.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(11)">
+                        <img src="../assets/images/avatars/11.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(12)">
+                        <img src="../assets/images/avatars/12.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(13)">
+                        <img src="../assets/images/avatars/13.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(14)">
+                        <img src="../assets/images/avatars/14.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(15)">
+                        <img src="../assets/images/avatars/15.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(16)">
+                        <img src="../assets/images/avatars/16.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(17)">
+                        <img src="../assets/images/avatars/17.jpg" class="avatar-img">
+                    </div>
+                    <div class="avatar" onclick="updateAvatar(18)">
+                        <img src="../assets/images/avatars/18.jpg" class="avatar-img">
+                    </div>
+                </div>
+            </div>
+            <div class="body-tab players">
+               <div class="tab-players" id="tab-players">
+                    <div class="player c1">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/1.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Vicente Hernández</div>
+                    </div>
+                    <div class="player c2">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/2.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Sofia Varela</div>
+                    </div>
+                    <div class="player c3">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/3.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Marcelo Trigo</div>
+                    </div>
+                    <div class="player c4">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/4.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Vicente Hernández</div>
+                    </div>
+                    <div class="player c5">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/5.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Sofia Varela</div>
+                    </div>
+                    <div class="player c1">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/6.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Vicente Hernández</div>
+                    </div>
+                    <div class="player c2">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/7.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Sofia Varela</div>
+                    </div>
+                    <div class="player c3">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/8.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Marcelo Trigo</div>
+                    </div>
+                    <div class="player c4">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/9.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Vicente Hernández</div>
+                    </div>
+                    <div class="player c5">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/10.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Sofia Varela</div>
+                    </div>
+                    <div class="player c1">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/11.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Sofia Varela</div>
+                    </div>
+                    <div class="player c2">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/12.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Sofia Varela</div>
+                    </div>
+                    <div class="player c3">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/13.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Sofia Varela</div>
+                    </div>
+                    <div class="player c4">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/14.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Sofia Varela</div>
+                    </div>
+                    <div class="player c5">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/15.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Sofia Varela</div>
+                    </div>
+                    <div class="player c1">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/16.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Sofia Varela</div>
+                    </div>
+                    <div class="player c2">
+                        <div class="player-avatar">
+                            <img src="../assets/images/avatars/17.jpg" class="p-a">
+                        </div>
+                        <div class="player-name">Sofia Varela</div>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/index.js"></script>
+    <script type="text/javascript">
+        sendAlert("info", 20000, "¿Sabias que dando click sobre la imagen puedes cambiarla?");
+    </script>
+</body>
+</html>

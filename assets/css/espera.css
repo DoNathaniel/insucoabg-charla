@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Comic Sans MS;
+
+    user-select: none;
+}
+
+body {
+    display: flex;
+    width: 100%;
+}
+
+/* TOP */
+
+body .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: rgb(228,0,0);
+    background: linear-gradient(120deg, rgba(228,0,0,1) 0%, rgba(239,171,255,1) 50%, rgba(189,5,255,1) 100%);
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    
+    overflow: hidden;
+}
+
+body .container .container-top {
+    width: 80%;
+    padding: 15px;
+    border-radius: 5px;
+    background: white;
+}
+
+body .container .container-top .top-textload {
+    display: flex;
+}
+
+body .container .container-body {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .container .container-body .body-tab {
+    height: 60vh;
+    background: white;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+body .container .container-body .body-tab.update-avatar .top-update-avatar {
+    display: none;
+}
+
+body .container .container-body .body-tab.update-avatar.activo {
+    width: 40%;
+}
+
+body .container .container-body .body-tab.update-avatar.activo >.body-tab.players {
+    width: 30%;
+}
+
+body .container .container-body .body-tab.update-avatar.activo .top-update-avatar {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+
+    justify-content: center;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+body .container .container-body .body-tab.update-avatar.activo .top-update-avatar .avatar {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 100%;
+    border: solid 3px black;
+    margin: 10px;
+    overflow: hidden;
+}
+
+body .container .container-body .body-tab.update-avatar.activo .top-update-avatar .avatar img.avatar-img {
+    width: 100%;
+    position: relative;
+    top: 20px;
+    right: 10px;
+}
+
+body .container .container-body .body-tab.perfil {
+    width: 30%;
+}
+
+body .container .container-body .body-tab.perfil .top-perfil {
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body .container .container-body .body-tab.perfil .top-perfil .perfil-avatar {
+    border-radius: 100%;
+    overflow: hidden;
+    border: solid 5px black;
+    width: 250px;
+}
+
+body .container .container-body .body-tab.perfil .top-perfil .perfil-avatar:hover > img.t-p-a {
+    cursor: pointer;
+    filter: blur(40px);
+}
+
+body .container .container-body .body-tab.perfil .top-perfil .perfil-avatar img.t-p-a {
+    width: 100%;
+    position: relative;
+    top: 40px;
+    right: 20px;
+    transition: all .2s;
+}
+
+body .container .container-body .body-tab.perfil .top-perfil .perfil-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+body .container .container-body .body-tab.perfil .top-perfil .perfil-info .perfil-name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+body .container .container-body .body-tab.perfil .top-perfil .perfil-info .perfil-email {
+    font-size: 14px;
+}
+
+body .container .container-body .body-tab.players {
+    width: 70%;
+    padding: 10px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+body .container .container-body .body-tab.players .tab-players {
+    width: 100%;
+    height: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body .container .container-body .body-tab.players .tab-players .player {
+    min-width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+
+    margin: 5px;
+    padding: 30px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+body .container .container-body .body-tab.players .tab-players .player.c1 {
+    background: rgb(66,232,147);
+    background: linear-gradient(120deg, rgba(66,232,147,1) 0%, rgba(255,14,225,1) 100%);
+}
+body .container .container-body .body-tab.players .tab-players .player.c2 {
+    background: rgb(231,217,57);
+    background: linear-gradient(120deg, rgba(231,217,57,1) 10%, rgba(86,14,255,1) 90%);
+}
+body .container .container-body .body-tab.players .tab-players .player.c3 {
+    background: rgb(94,152,227);
+    background: linear-gradient(120deg, rgba(94,152,227,1) 0%, rgba(40,0,134,1) 100%);
+}
+
+body .container .container-body .body-tab.players .tab-players .player.c4 {
+    background: rgb(16,157,2);
+    background: linear-gradient(120deg, rgba(16,157,2,1) 0%, rgba(255,248,0,1) 100%);
+}
+
+body .container .container-body .body-tab.players .tab-players .player.c5    {
+    background: rgb(157,2,151);
+    background: linear-gradient(120deg, rgba(157,2,151,1) 0%, rgba(255,0,0,1) 100%);
+}
+
+body .container .container-body .body-tab.players .tab-players .player .player-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 10px;
+    background: white;
+
+    border: solid 1px black;
+}
+
+body .container .container-body .body-tab.players .tab-players .player .player-avatar img.p-a {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 5px;
+    right: 3px;
+}
+
+/* LOADINGS */
+.custom-loader {
+    width: 25px;
+    height: 25px;
+    display: grid;
+
+    margin-left: auto;
+}
+.custom-loader::before,
+.custom-loader::after {    
+    content:"";
+    grid-area: 1/1;
+    --c: radial-gradient(farthest-side,#000000 92%,#0000);
+    background: 
+      var(--c) 50%  0, 
+      var(--c) 50%  100%, 
+      var(--c) 100% 50%, 
+      var(--c) 0    50%;
+    background-size: 6px 6px;
+    background-repeat: no-repeat;
+    animation: s2 1s infinite;
+}
+.custom-loader::before {
+  margin:2px;
+  filter:hue-rotate(45deg);
+  background-size: 4px 4px;
+  animation-timing-function: linear
+}
+
+@keyframes s2{ 
+  100%{transform: rotate(.5turn)}
+}
