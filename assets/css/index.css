@@ -123,3 +123,45 @@ body .container .container-top .container-top-bottom button:hover {
 }
 
 /* Lenguajes */
+
+@media screen and (max-width: 1200px) {
+    body .container .container-top .container-top-content .c-top-left .c-top-left-text {
+        font-size: 90px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    body .container .container-top .container-top-content .c-top-left .c-top-left-text {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body .container .container-top .container-top-content {
+        flex-direction: column;
+        height: 70vh;
+    }
+
+    body .container .container-top .container-top-content .c-top-left {
+        padding: 10px;
+        width: 100%; 
+        text-align: center;
+    }
+
+    body .container .container-top .container-top-content .c-top-left .c-top-left-text {
+        font-size: 35px;
+    }
+
+    body .container .container-top .container-top-content .c-top-left .c-top-left-subtext {
+        font-size: 13px;
+    }
+
+    body .container .container-top .container-top-content .c-top-right {
+        padding: 10px;
+        width: 100%; 
+    }
+
+    body .container .container-top .container-top-content .c-top-right .c-top-right-icon {
+        width: 200px;
+    }
+}

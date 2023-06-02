@@ -17,7 +17,7 @@ body {
 
 body .container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     background: rgb(228,0,0);
     background: linear-gradient(120deg, rgba(228,0,0,1) 0%, rgba(239,171,255,1) 50%, rgba(189,5,255,1) 100%);
@@ -55,8 +55,13 @@ body .container .container-body .body-tab {
     transition: all .5s;
 }
 
+body .container .container-body .body-tab.update-avatar  {
+    height: 0;
+}
+
 body .container .container-body .body-tab.update-avatar .top-update-avatar {
     display: none;
+    height: 0px;
 }
 
 body .container .container-body .body-tab.update-avatar.activo {
@@ -242,4 +247,45 @@ body .container .container-body .body-tab.players .tab-players .player .player-a
 
 @keyframes s2{ 
   100%{transform: rotate(.5turn)}
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1200px) {
+    body .container .container-top {
+        width: 90%;
+    }
+
+    body .container .container-body {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    body .container .container-top {
+        margin-top: 10px;
+    }
+
+    body .container .container-body {
+        flex-direction: column;
+    }
+
+    body .container .container-body .body-tab {
+        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    body .container .container-body .body-tab.perfil {
+        width: 95%;
+    }
+
+    body .container .container-body .body-tab.players {
+        width: 95%;
+    }
+
+    body .container .container-body .body-tab.update-avatar.activo {
+        width: 95%;
+        height: 40vh;
+    }
 }
