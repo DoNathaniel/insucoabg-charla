@@ -1,5 +1,5 @@
 function MainConfigDB() {
-    return "https://donathaniel-improved-sniffle-xx99vrq654739wv-5555.preview.app.github.dev/";
+    return "https://donathaniel-improved-sniffle-xx99vrq654739wv-5555.preview.app.github.dev";
 }
 
 async function verifyLevel() {
